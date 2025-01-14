@@ -16,7 +16,7 @@ function TopElement() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
         <div
           className="text-center space-y-8 animate__animated animate__fadeIn"
-          // style="opacity: 1;"
+          style={{ opacity: 1 }}
         >
           <h1 className="text-4xl md:text-6xl font-serif text-white mb-6 relative inline-block">
             Specterior Interior Design

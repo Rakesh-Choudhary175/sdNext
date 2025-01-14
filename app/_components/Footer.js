@@ -65,7 +65,7 @@ function Footer() {
 
           <div
             className="animate__animated animate__fadeIn"
-            // style="animation-delay: 0.2s"
+            style={{ animationDelay: "0.2s" }}
           >
             <h3 className="text-xl font-serif text-[#D4AF37] mb-6">
               Quick Links
@@ -116,7 +116,7 @@ function Footer() {
 
           <div
             className="animate__animated animate__fadeIn"
-            // style="animation-delay: 0.4s"
+            style={{ animationDelay: "0.4s" }}
           >
             <h3 className="text-xl font-serif text-[#D4AF37] mb-6">
               Contact Us

@@ -10,10 +10,7 @@ function Feature() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div
-            className="bg-white rounded-lg shadow-xl p-6 hover:transform hover:scale-105 transition-all duration-300 group animate__animated animate__fadeInUp"
-            // style="opacity: 1; transform: translateY(0px);"
-          >
+          <div className="bg-white rounded-lg shadow-xl p-6 hover:transform hover:scale-105 transition-all duration-300 group animate__animated animate__fadeInUp">
             <div className="h-16 w-16 mx-auto mb-6 text-[#D4AF37] group-hover:text-[#003D33] transition-colors">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -38,10 +35,7 @@ function Feature() {
             </p>
           </div>
 
-          <div
-            className="bg-white rounded-lg shadow-xl p-6 hover:transform hover:scale-105 transition-all duration-300 group animate__animated animate__fadeInUp"
-            // style="animation-delay: 0.2s; opacity: 1; transform: translateY(0px);"
-          >
+          <div className="bg-white rounded-lg shadow-xl p-6 hover:transform hover:scale-105 transition-all duration-300 group animate__animated animate__fadeInUp">
             <div className="h-16 w-16 mx-auto mb-6 text-[#D4AF37] group-hover:text-[#003D33] transition-colors">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,10 +60,7 @@ function Feature() {
             </p>
           </div>
 
-          <div
-            className="bg-white rounded-lg shadow-xl p-6 hover:transform hover:scale-105 transition-all duration-300 group animate__animated animate__fadeInUp"
-            // style="animation-delay: 0.4s; opacity: 1; transform: translateY(0px);"
-          >
+          <div className="bg-white rounded-lg shadow-xl p-6 hover:transform hover:scale-105 transition-all duration-300 group animate__animated animate__fadeInUp">
             <div className="h-16 w-16 mx-auto mb-6 text-[#D4AF37] group-hover:text-[#003D33] transition-colors">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -94,10 +85,7 @@ function Feature() {
             </p>
           </div>
 
-          <div
-            className="bg-white rounded-lg shadow-xl p-6 hover:transform hover:scale-105 transition-all duration-300 group animate__animated animate__fadeInUp"
-            // style="animation-delay: 0.6s; opacity: 1; transform: translateY(0px);"
-          >
+          <div className="bg-white rounded-lg shadow-xl p-6 hover:transform hover:scale-105 transition-all duration-300 group animate__animated animate__fadeInUp">
             <div className="h-16 w-16 mx-auto mb-6 text-[#D4AF37] group-hover:text-[#003D33] transition-colors">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
