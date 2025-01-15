@@ -145,7 +145,7 @@ function Footer() {
                   </svg>
                 </span>
                 <span className="text-white">
-                  123 Design Street, Creative City, ST 12345
+                  Mudra Society,Vasant Baug Society,Padmavati Nager,Pune 411009
                 </span>
               </div>
               <div className="flex items-start">
@@ -164,7 +164,7 @@ function Footer() {
                     ></path>
                   </svg>
                 </span>
-                <span className="text-white">info@specterior.com</span>
+                <span className="text-white">specteriordesigns@gmail.com</span>
               </div>
               <div className="flex items-start">
                 <span className="text-[#D4AF37] mr-3">
@@ -182,7 +182,7 @@ function Footer() {
                     ></path>
                   </svg>
                 </span>
-                <span className="text-white">+1 (555) 123-4567</span>
+                <span className="text-white">9112168758</span>
               </div>
             </div>
           </div>

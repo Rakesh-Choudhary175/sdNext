@@ -61,7 +61,17 @@ function GetInTouch() {
           <div className="space-y-8 animate__animated animate__fadeInRight">
             {/* Map  */}
             <div className="h-64 rounded-lg border-4 border-[#D4AF37] overflow-hidden">
-              <div id="map" className="w-full h-full bg-neutral-800"></div>
+              <div id="map" className="w-full h-full bg-neutral-800">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d622.4082940777886!2d73.85676870964488!3d18.461316528970972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eb4dbfcb65b9%3A0xbc0a38f2f37d2ac8!2sSpecterior%20Designs!5e0!3m2!1sen!2sin!4v1676184012562!5m2!1sen!2sin"
+                  width="100%"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </div>
 
             {/* Contact Details  */}
@@ -91,7 +101,8 @@ function GetInTouch() {
                   <div className="ml-4">
                     <h4 className="text-[#D4AF37] font-serif">Address</h4>
                     <p className="text-white">
-                      123 Design Street, Creative City, ST 12345
+                      Mudra Society,Vasant Baug Society,Padmavati Nager,Pune
+                      411009
                     </p>
                   </div>
                 </div>
@@ -114,7 +125,7 @@ function GetInTouch() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-[#D4AF37] font-serif">Phone</h4>
-                    <p className="text-white">+1 (555) 123-4567</p>
+                    <p className="text-white">9112168758 </p>
                   </div>
                 </div>
 
@@ -136,7 +147,7 @@ function GetInTouch() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-[#D4AF37] font-serif">Email</h4>
-                    <p className="text-white">info@specterior.com</p>
+                    <p className="text-white">specteriordesigns@gmail.com </p>
                   </div>
                 </div>
               </div>

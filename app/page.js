@@ -1,9 +1,9 @@
-import Image from "next/image";
 import TopElement from "./_components/TopElement";
 import Feature from "./_components/Feature";
 import Footer from "./_components/Footer";
 import GetInTouch from "./_components/GetInTouch";
 import Header from "./_components/Header";
+import Portfolio from "./_components/Portfolio";
 
 export default function Home() {
   return (
@@ -11,6 +11,7 @@ export default function Home() {
       <Header />
       <TopElement />
       <Feature />
+      <Portfolio />
       <GetInTouch />
 
       <Footer />

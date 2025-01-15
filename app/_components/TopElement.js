@@ -19,7 +19,7 @@ function TopElement() {
           style={{ opacity: 1 }}
         >
           <h1 className="text-4xl md:text-6xl font-serif text-white mb-6 relative inline-block">
-            Specterior Interior Design
+            Specterior Interior
             <span className="absolute bottom-0 left-0 w-full h-1 bg-[#D4AF37]"></span>
           </h1>
 
