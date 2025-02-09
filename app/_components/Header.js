@@ -1,10 +1,19 @@
+"use client";
+
 import logo from "@/public/logo.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import LinkButton from "./LinkButton";
 import LinkButtonMobile from "./LinkButtonMobile";
+import { useState } from "react";
 
 function Header() {
+  const [openMenu, setOpenMenu] = useState(false);
+
+  function handleMenuClick() {
+    setOpenMenu(!openMenu);
+  }
+
   return (
     <nav id="navbar" className="bg-neutral-900 fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,27 +71,63 @@ function Header() {
             <button
               id="mobile-menu-button"
               className="text-gray-300 hover:text-white focus:outline-none"
+              onClick={handleMenuClick}
             >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                ></path>
-              </svg>
+              {openMenu && (
+                <svg width="24" height="24">
+                  <g>
+                    <line
+                      stroke="#fff"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      id="svg_2"
+                      y2="20"
+                      x2="20"
+                      y1="3.5"
+                      x1="3.5"
+                      fill="none"
+                    />
+                    <line
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      id="svg_3"
+                      y2="20"
+                      x2="3.5"
+                      y1="3.5"
+                      x1="20"
+                      stroke="#fff"
+                      fill="none"
+                    />
+                  </g>
+                </svg>
+              )}
+              {!openMenu && (
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  ></path>
+                </svg>
+              )}
             </button>
           </div>
         </div>
       </div>
 
       {/* Mobile Menu  */}
-      <div id="mobile-menu" className="hidden md:hidden bg-neutral-900">
+      <div
+        id="mobile-menu"
+        className={`${openMenu ? "" : "hidden"} md:hidden bg-neutral-900`}
+      >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <LinkButtonMobile link="https://specterior-interio6hgg.rollout.site/#">
             Home

@@ -1,3 +1,5 @@
+import Form from "./forms/Form";
+
 function GetInTouch() {
   return (
     <section id="contact" className="py-20 bg-[#003D33]">
@@ -11,50 +13,7 @@ function GetInTouch() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form  */}
           <div className="bg-neutral-900 p-8 rounded-lg animate__animated animate__fadeInLeft">
-            <form id="contactForm" className="space-y-6">
-              <div>
-                <label className="block text-white mb-2">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-3 bg-neutral-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
-                  required=""
-                />
-              </div>
-              <div>
-                <label className="block text-white mb-2">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-3 bg-neutral-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
-                  required=""
-                />
-              </div>
-              <div>
-                <label className="block text-white mb-2">Phone</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  className="w-full px-4 py-3 bg-neutral-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
-                  required=""
-                />
-              </div>
-              <div>
-                <label className="block text-white mb-2">Message</label>
-                <textarea
-                  id="message"
-                  rows="4"
-                  className="w-full px-4 py-3 bg-neutral-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
-                  required=""
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full py-4 bg-[#D4AF37] text-white rounded-lg hover:bg-white hover:text-[#D4AF37] transition-colors duration-300"
-              >
-                Send Message
-              </button>
-            </form>
+            <Form />
           </div>
 
           {/* Contact Information  */}

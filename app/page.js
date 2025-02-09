@@ -4,6 +4,7 @@ import Footer from "./_components/Footer";
 import GetInTouch from "./_components/GetInTouch";
 import Header from "./_components/Header";
 import Portfolio from "./_components/Portfolio";
+import PopupForm from "./_components/forms/PopupForm";
 
 export default function Home() {
   return (
@@ -13,7 +14,6 @@ export default function Home() {
       <Feature />
       <Portfolio />
       <GetInTouch />
-
       <Footer />
     </>
   );

@@ -1,3 +1,6 @@
+import Image from "next/image";
+import image2 from "@/public/image.jpeg";
+
 function TopElement() {
   return (
     <section
