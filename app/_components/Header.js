@@ -7,11 +7,16 @@ import LinkButton from "./LinkButton";
 import LinkButtonMobile from "./LinkButtonMobile";
 import { useState } from "react";
 
-function Header() {
+function Header({ handleQuote }) {
   const [openMenu, setOpenMenu] = useState(false);
 
   function handleMenuClick() {
     setOpenMenu(!openMenu);
+  }
+
+  function handleGetQuote() {
+    setOpenMenu(false);
+    handleQuote();
   }
 
   return (
@@ -39,18 +44,10 @@ function Header() {
           {/*  Desktop Menu  */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
-              <LinkButton link="https://specterior-interio6hgg.rollout.site/#">
-                Home
-              </LinkButton>
-              <LinkButton link="https://specterior-interio6hgg.rollout.site/#">
-                About Us
-              </LinkButton>
-              <LinkButton link="https://specterior-interio6hgg.rollout.site/#">
-                Services
-              </LinkButton>
-              <LinkButton link="https://specterior-interio6hgg.rollout.site/#">
-                Portfolio
-              </LinkButton>
+              <LinkButton link="#hero">Home</LinkButton>
+              <LinkButton link="#aboutus">About Us</LinkButton>
+              <LinkButton link="#services">Services</LinkButton>
+              <LinkButton link="#portfolio">Portfolio</LinkButton>
               <LinkButton link="https://specterior-interio6hgg.rollout.site/#">
                 Blog
               </LinkButton>
@@ -60,7 +57,10 @@ function Header() {
               <LinkButton link="https://specterior-interio6hgg.rollout.site/#">
                 Contact Us
               </LinkButton>
-              <button className="bg-[#003D33] text-[#D4AF37] px-6 py-2 rounded-lg hover:bg-[#D4AF37] hover:text-white transition-colors">
+              <button
+                className="bg-[#003D33] text-[#D4AF37] px-6 py-2 rounded-lg hover:bg-[#D4AF37] hover:text-white transition-colors"
+                onClick={handleQuote}
+              >
                 Get a Quote
               </button>
             </div>
@@ -150,7 +150,10 @@ function Header() {
           <LinkButtonMobile link="https://specterior-interio6hgg.rollout.site/#">
             Contact Us
           </LinkButtonMobile>
-          <button className="w-full mt-2 bg-[#003D33] text-[#D4AF37] px-6 py-2 rounded-lg hover:bg-[#D4AF37] hover:text-white transition-colors">
+          <button
+            className="w-full mt-2 bg-[#003D33] text-[#D4AF37] px-6 py-2 rounded-lg hover:bg-[#D4AF37] hover:text-white transition-colors"
+            onClick={handleGetQuote}
+          >
             Get a Quote
           </button>
         </div>
