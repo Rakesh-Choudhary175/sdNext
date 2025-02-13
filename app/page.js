@@ -8,6 +8,7 @@ import Header from "./_components/Header";
 import Portfolio from "./_components/Portfolio";
 import PopupForm from "./_components/forms/PopupForm";
 import { useEffect, useState } from "react";
+import Lenis from "lenis";
 
 export default function Home() {
   const [quote, setquote] = useState(false);
@@ -15,6 +16,15 @@ export default function Home() {
   function handleQuote() {
     setquote(!quote);
   }
+
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {

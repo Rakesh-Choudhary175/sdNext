@@ -44,19 +44,17 @@ function Header({ handleQuote }) {
           {/*  Desktop Menu  */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
-              <LinkButton link="#hero">Home</LinkButton>
-              <LinkButton link="#aboutus">About Us</LinkButton>
-              <LinkButton link="#services">Services</LinkButton>
-              <LinkButton link="#portfolio">Portfolio</LinkButton>
+              <LinkButton link="hero">Home</LinkButton>
+              <LinkButton link="aboutus">About Us</LinkButton>
+              <LinkButton link="services">Services</LinkButton>
+              <LinkButton link="portfolio">Portfolio</LinkButton>
               <LinkButton link="https://specterior-interio6hgg.rollout.site/#">
                 Blog
               </LinkButton>
               <LinkButton link="https://specterior-interio6hgg.rollout.site/#">
                 Testimonials
               </LinkButton>
-              <LinkButton link="https://specterior-interio6hgg.rollout.site/#">
-                Contact Us
-              </LinkButton>
+              <LinkButton link="contact">Contact Us</LinkButton>
               <button
                 className="bg-[#003D33] text-[#D4AF37] px-6 py-2 rounded-lg hover:bg-[#D4AF37] hover:text-white transition-colors"
                 onClick={handleQuote}
@@ -129,16 +127,16 @@ function Header({ handleQuote }) {
         className={`${openMenu ? "" : "hidden"} md:hidden bg-neutral-900`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <LinkButtonMobile link="https://specterior-interio6hgg.rollout.site/#">
+          <LinkButtonMobile link="hero" closeMenu={setOpenMenu}>
             Home
           </LinkButtonMobile>
-          <LinkButtonMobile link="https://specterior-interio6hgg.rollout.site/#">
+          <LinkButtonMobile link="aboutus" closeMenu={setOpenMenu}>
             About Us
           </LinkButtonMobile>
-          <LinkButtonMobile link="https://specterior-interio6hgg.rollout.site/#">
+          <LinkButtonMobile link="services" closeMenu={setOpenMenu}>
             Services
           </LinkButtonMobile>
-          <LinkButtonMobile link="https://specterior-interio6hgg.rollout.site/#">
+          <LinkButtonMobile link="portfolio" closeMenu={setOpenMenu}>
             Portfolio
           </LinkButtonMobile>
           <LinkButtonMobile link="https://specterior-interio6hgg.rollout.site/#">
@@ -147,7 +145,7 @@ function Header({ handleQuote }) {
           <LinkButtonMobile link="https://specterior-interio6hgg.rollout.site/#">
             Testimonials
           </LinkButtonMobile>
-          <LinkButtonMobile link="https://specterior-interio6hgg.rollout.site/#">
+          <LinkButtonMobile link="contact" closeMenu={setOpenMenu}>
             Contact Us
           </LinkButtonMobile>
           <button
