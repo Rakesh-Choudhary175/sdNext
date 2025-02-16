@@ -96,6 +96,32 @@ function Portfolio() {
               </div>
             </div>
           </div>
+          <div
+            className="group relative h-80 overflow-hidden rounded-lg animate__animated animate__fadeInUp"
+            style={{ animationDelay: "0.4s" }}
+          >
+            <div className="absolute inset-0 bg-[#003D33]">
+              <figure>
+                <Image
+                  src={image}
+                  alt="#"
+                  loading="lazy"
+                  height={1000}
+                  width={1000}
+                  className="transition-opacity duration-300 opacity-100"
+                />
+              </figure>
+            </div>
+            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="text-center p-4">
+                <h3 className="text-[#D4AF37] text-xl font-serif mb-2">
+                  Boutique Restaurant
+                </h3>
+                <p className="text-white">Commercial Design</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <section id="aboutus" className="py-20 bg-neutral-900">

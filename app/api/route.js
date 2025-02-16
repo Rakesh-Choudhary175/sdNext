@@ -26,7 +26,7 @@ export async function GET(request, { params }) {
     const auth = Buffer.from(`${apiKey}:${apiSecret}`).toString("base64");
 
     const res = await fetch(
-      `https://api.cloudinary.com/v1_1/${cloudName}/resources/image`,
+      `https://api.cloudinary.com/v1_1/${cloudName}/resources/image?max_results=500`,
       {
         headers: {
           Authorization: `Basic ${auth}`,

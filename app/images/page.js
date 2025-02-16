@@ -67,6 +67,7 @@
 
 // In a React component
 import { useEffect, useState } from "react";
+import Img from "./Img";
 
 export default function Image() {
   const [images, setImages] = useState([]);
@@ -91,22 +92,10 @@ export default function Image() {
 
   return (
     <div>
-      <h1>Cloudinary Images</h1>
       {error && <p style={{ color: "red" }}>{error}</p>}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "1rem",
-        }}
-      >
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {images.map((image) => (
-          <img
-            key={image.public_id}
-            src={image.secure_url}
-            alt={image.public_id}
-            style={{ width: "100%" }}
-          />
+          <Img src={image.url} key={image.public_id} />
         ))}
       </div>
     </div>
