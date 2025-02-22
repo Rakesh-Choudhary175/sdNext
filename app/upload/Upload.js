@@ -11,7 +11,7 @@ function Upload() {
     const files = e.target.files;
     const data = new FormData();
     data.append("file", files[0]);
-    data.append("upload_preset", "ml_default"); // Replace with your Cloudinary upload preset
+    data.append("upload_preset", "ml_default");
     data.append("cloud_name", process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME);
 
     setLoading(true);
@@ -19,7 +19,6 @@ function Upload() {
     const res = await fetch(
       `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`,
       {
-        // Replace with your Cloudinary cloud name
         method: "POST",
         body: data,
       }
