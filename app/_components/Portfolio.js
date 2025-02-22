@@ -3,6 +3,7 @@ import Image from "next/image";
 import image from "@/public/image.jpeg";
 import image1 from "@/public/prof.jpg";
 import image2 from "@/public/2.jpg";
+import Link from "next/link";
 
 function Portfolio() {
   return (
@@ -18,29 +19,31 @@ function Portfolio() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="group relative h-80 overflow-hidden rounded-lg animate__animated animate__fadeInUp">
-            <div className="absolute inset-0 bg-[#003D33]">
-              <figure>
-                <Image
-                  src={image}
-                  alt="#"
-                  loading="lazy"
-                  height={1000}
-                  width={1000}
-                  className="transition-opacity duration-300 opacity-100"
-                />
-              </figure>
-            </div>
-            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div className="text-center p-4">
-                <h3 className="text-[#D4AF37] text-xl font-serif mb-2">
-                  Luxury Villa Interior
-                </h3>
-                <p className="text-white">Contemporary Design</p>
+          <Link href="/images/bedroom">
+            <div className="group relative h-80 overflow-hidden rounded-lg animate__animated animate__fadeInUp">
+              <div className="absolute inset-0 bg-[#003D33]">
+                <figure>
+                  <Image
+                    src={image}
+                    alt="#"
+                    loading="lazy"
+                    height={1000}
+                    width={1000}
+                    className="transition-opacity duration-300 opacity-100"
+                  />
+                </figure>
+              </div>
+              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="text-center p-4">
+                  <h3 className="text-[#D4AF37] text-xl font-serif mb-2">
+                    Luxury Villa Interior
+                  </h3>
+                  <p className="text-white">Contemporary Design</p>
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
 
           <div
             className="group relative h-80 overflow-hidden rounded-lg animate__animated animate__fadeInUp"

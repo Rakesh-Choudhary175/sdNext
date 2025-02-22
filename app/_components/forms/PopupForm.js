@@ -1,9 +1,12 @@
 import { useState } from "react";
+import Spinner from "../Spinner";
+import SpinnerForm from "../SpinnerForm";
 
 function PopupForm({ handleQuote }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [submiting, setSubmiting] = useState(false);
 
   //onchange handler
   function handleName(event) {
@@ -14,6 +17,11 @@ function PopupForm({ handleQuote }) {
   }
   function handlePhone(event) {
     setPhone(event.target.value);
+  }
+
+  function handleSubmit(stat) {
+    setSubmiting(stat);
+    console.log(stat);
   }
 
   async function onSubmit(event) {
@@ -28,6 +36,7 @@ function PopupForm({ handleQuote }) {
 
     //placeholder for starting loading
     console.log("submission start");
+    handleSubmit(true);
 
     //sending data to excel
     let check = false;
@@ -61,6 +70,7 @@ function PopupForm({ handleQuote }) {
         body: json,
       }).then((res) => res.json());
     }
+    handleSubmit(false);
     //stop loading
     handleQuote();
     console.log("endde");
@@ -114,13 +124,17 @@ function PopupForm({ handleQuote }) {
               value={phone}
             />
           </div>
-
-          <button
-            type="submit"
-            className="w-full py-4 bg-[#D4AF37] text-white rounded-lg hover:bg-white hover:text-[#D4AF37] transition-colors duration-300"
-          >
-            Send Message
-          </button>
+          {submiting ? (
+            <SpinnerForm />
+          ) : (
+            <button
+              type="submit"
+              className="w-full py-4 bg-[#D4AF37] text-white rounded-lg hover:bg-white hover:text-[#D4AF37] transition-colors duration-300"
+              disabled={submiting}
+            >
+              Send Message
+            </button>
+          )}
         </form>
       </div>
     </div>

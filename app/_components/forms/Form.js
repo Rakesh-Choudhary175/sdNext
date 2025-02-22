@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Spinner from "../Spinner";
+import SpinnerForm from "../SpinnerForm";
 
 // below is the sheet code
 
@@ -19,6 +21,7 @@ function Form() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [submiting, setSubmiting] = useState(false);
 
   //onchange handler
   function handleName(event) {
@@ -34,6 +37,11 @@ function Form() {
     setMessage(event.target.value);
   }
 
+  function handleSubmit(stat) {
+    setSubmiting(stat);
+    console.log(stat);
+  }
+
   //onSumit handler
   async function onSubmit(event) {
     event.preventDefault();
@@ -47,6 +55,7 @@ function Form() {
 
     //placeholder for starting loading
     console.log("submission start");
+    handleSubmit(true);
 
     //sending data to excel
     let check = false;
@@ -80,6 +89,7 @@ function Form() {
         body: json,
       }).then((res) => res.json());
     }
+    handleSubmit(false);
     //stop loading
     console.log("endde");
 
@@ -136,12 +146,17 @@ function Form() {
           onChange={handleMessage}
         ></textarea>
       </div>
-      <button
-        type="submit"
-        className="w-full py-4 bg-[#D4AF37] text-white rounded-lg hover:bg-white hover:text-[#D4AF37] transition-colors duration-300"
-      >
-        Send Message
-      </button>
+
+      {submiting ? (
+        <SpinnerForm />
+      ) : (
+        <button
+          type="submit"
+          className="w-full py-4 bg-[#D4AF37] text-white rounded-lg hover:bg-white hover:text-[#D4AF37] transition-colors duration-300"
+        >
+          Send Message
+        </button>
+      )}
     </form>
   );
 }
