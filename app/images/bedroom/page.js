@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Img from "./Img";
 import Spinner from "@/app/_components/Spinner";
+import BigScreenImg from "./BigScreenImg";
 import Link from "next/link";
 
 export default function Image() {
@@ -47,8 +48,15 @@ export default function Image() {
       )}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {images.map((image) => (
-          <Link href={`/images/5`} key={image.public_id}>
+          <Link
+            href={{
+              pathname: "/images/bedroom/3",
+              query: { img: image.secure_url.slice(50) },
+            }}
+            key={image.public_id}
+          >
             <Img src={image.secure_url} key={image.public_id} />
+            {console.log(image.secure_url)}
           </Link>
         ))}
       </div>
