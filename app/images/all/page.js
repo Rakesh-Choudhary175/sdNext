@@ -19,29 +19,30 @@ export default function Image() {
   const data = useContext(ImgDataContext);
   console.log(data);
 
-  useEffect(() => {
-    const fetchImages = async () => {
-      handleLoading(true);
-      try {
-        const response = await fetch("/api/hall");
-        if (!response.ok) {
-          throw new Error("Failed to fetch images");
-        }
-        const data = await response.json();
-        setImages(data.data?.resources || []);
-      } catch (err) {
-        setError(err.message);
-      }
-      handleLoading(false);
-    };
+  // useEffect(() => {
+  //   const fetchImages = async () => {
+  //     handleLoading(true);
+  //     try {
+  //       const response = await fetch("/api/hall");
+  //       if (!response.ok) {
+  //         throw new Error("Failed to fetch images");
+  //       }
+  //       const data = await response.json();
+  //       setImages(data.data?.resources || []);
+  //     } catch (err) {
+  //       setError(err.message);
+  //     }
+  //     handleLoading(false);
+  //   };
 
-    fetchImages();
-  }, []);
+  //   fetchImages();
+  // }, []);
 
   return (
     <div>
-      {loadingImages && <Spinner />}
-      {error && (
+      {data.imgDataAll[0] == null && <Spinner />}
+      {/* {loadingImages && <Spinner />} */}
+      {/* {error && (
         <div className="flex flex-row min-h-screen justify-center items-center">
           <h1
             className="text-4xl md:text-6xl font-serif text-white mb-6 relative inline-block"
@@ -50,19 +51,10 @@ export default function Image() {
             {error}
           </h1>
         </div>
-      )}
+      )} */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {data.imgDataBR.map((image) => (
-          <Link
-            href={{
-              pathname: "/images/bedroom/3",
-              query: { img: image.secure_url.slice(50) },
-            }}
-            key={image.public_id}
-          >
-            <Img src={image.secure_url} key={image.public_id} />
-            {/* {console.log(image.secure_url)} */}
-          </Link>
+        {data.imgDataAll.map((image) => (
+          <Img src={image.secure_url} key={image.public_id} />
         ))}
       </div>
     </div>

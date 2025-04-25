@@ -75,7 +75,7 @@ function Form() {
 
     //if succesfully send to sheet then send mail for new entry
     if (check == true) {
-      formData.append("access_key", "756c2034-2ef9-4066-9aea-fdb3fe162d3c");
+      formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_API_KEY);
 
       const object = Object.fromEntries(formData);
       const json = JSON.stringify(object);
