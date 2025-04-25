@@ -19,7 +19,7 @@ export async function GET(request, { params }) {
     if (!res.ok) {
       throw new Error("Failed to fetch Cloudinary resources");
     }
-
+    //dbcjk
     const data = await res.json();
     return NextResponse.json({ data });
   } catch (error) {
