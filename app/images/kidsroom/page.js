@@ -1,22 +1,11 @@
 "use client";
 
-import Img from "./Img";
-import Spinner from "@/app/_components/Spinner";
-
 import { ImgDataContext } from "@/app/_context/imgData";
 import { useContext } from "react";
+import ImagesPage from "@/app/_components/Pages/ImagesPage";
 
 export default function Image() {
   const data = useContext(ImgDataContext);
   console.log(data);
-  return (
-    <div>
-      {data.imgDataKR[0] == null && <Spinner />}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {data.imgDataKR.map((image) => (
-          <Img src={image.secure_url} key={image.public_id} />
-        ))}
-      </div>
-    </div>
-  );
+  return <ImagesPage data={data.imgDataKR} />;
 }

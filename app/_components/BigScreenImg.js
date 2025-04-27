@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-function BigScreenImg({ imgUrl }) {
+function BigScreenImg({ src }) {
   return (
     <div
       style={{
@@ -14,7 +14,7 @@ function BigScreenImg({ imgUrl }) {
       <Image
         alt="Next.js Conf photo"
         className="rounded-lg"
-        src={imgUrl}
+        src={src}
         width={1920}
         height={1080}
         sizes="100vw"
