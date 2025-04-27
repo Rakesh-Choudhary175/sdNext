@@ -2,9 +2,9 @@ import { NextResponse } from "next/server";
 
 export async function GET(request, { params }) {
   try {
-    const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME_ALL; // Replace with actual cloud name
-    const apiKey = process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY_ALL;
-    const apiSecret = process.env.CLOUDINARY_API_SECRET_ALL;
+    const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME_KDR; // Replace with actual cloud name
+    const apiKey = process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY_KDR;
+    const apiSecret = process.env.CLOUDINARY_API_SECRET_KDR;
     const auth = Buffer.from(`${apiKey}:${apiSecret}`).toString("base64");
 
     const res = await fetch(

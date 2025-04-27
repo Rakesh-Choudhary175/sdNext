@@ -40,7 +40,7 @@ export default function Image() {
 
   return (
     <div>
-      {data.imgDataAll[0] == null && <Spinner />}
+      {data.imgDataKic[0] == null && <Spinner />}
       {/* {loadingImages && <Spinner />} */}
       {/* {error && (
         <div className="flex flex-row min-h-screen justify-center items-center">
@@ -53,7 +53,7 @@ export default function Image() {
         </div>
       )} */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {data.imgDataAll.map((image) => (
+        {data.imgDataKic.map((image) => (
           <Img src={image.secure_url} key={image.public_id} />
         ))}
       </div>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import image2 from "@/public/image.jpeg";
+import image2 from "@/public/livingroom.jpeg";
 
 function TopElement() {
   return (

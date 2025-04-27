@@ -1,6 +1,11 @@
 import Image from "next/image";
 
-import image from "@/public/image.jpeg";
+import livingRoomImage from "@/public/livingroom.jpeg";
+import bedroomImage from "@/public/bedroom.png";
+import entranceImage from "@/public/entrance.png";
+import kidsRoomImage from "@/public/kidsroom.png";
+import kitchenImage from "@/public/kitchen.png";
+// import livingRoomImage from "@/public/livingroom.png";
 import image1 from "@/public/prof.jpg";
 import image2 from "@/public/2.jpg";
 import Link from "next/link";
@@ -24,12 +29,13 @@ function Portfolio() {
               <div className="absolute inset-0 bg-[#003D33]">
                 <figure>
                   <Image
-                    src={image}
+                    src={bedroomImage}
                     alt="#"
                     loading="lazy"
-                    height={1000}
-                    width={1000}
+                    // height={1000}
+                    // width={1000}
                     className="transition-opacity duration-300 opacity-100"
+                    fill={true}
                   />
                 </figure>
               </div>
@@ -53,12 +59,13 @@ function Portfolio() {
               <div className="absolute inset-0 bg-[#003D33]">
                 <figure>
                   <Image
-                    src={image}
+                    src={livingRoomImage}
                     alt="#"
                     loading="lazy"
-                    height={1000}
-                    width={1000}
+                    // height={1000}
+                    // width={1000}
                     className="transition-opacity duration-300 opacity-100"
+                    fill={true}
                   />
                 </figure>
               </div>
@@ -75,7 +82,7 @@ function Portfolio() {
             </div>
           </Link>
 
-          <Link href="/images/all">
+          <Link href="/images/kitchen">
             <div
               className="group relative h-80 overflow-hidden rounded-lg animate__animated animate__fadeInUp"
               style={{ animationDelay: "0.4s" }}
@@ -83,12 +90,42 @@ function Portfolio() {
               <div className="absolute inset-0 bg-[#003D33]">
                 <figure>
                   <Image
-                    src={image}
+                    src={kitchenImage}
                     alt="#"
                     loading="lazy"
-                    height={1000}
-                    width={1000}
+                    // height={1000}
+                    // width={1000}
                     className="transition-opacity duration-300 opacity-100"
+                    fill={true}
+                  />
+                </figure>
+              </div>
+              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="text-center p-4">
+                  <h3 className="text-[#D4AF37] text-xl font-serif mb-2">
+                    Boutique Restaurant
+                  </h3>
+                  <p className="text-white">Commercial Design</p>
+                </div>
+              </div>
+            </div>
+          </Link>
+          <Link href="/images/kidsroom">
+            <div
+              className="group relative h-80 overflow-hidden rounded-lg animate__animated animate__fadeInUp"
+              style={{ animationDelay: "0.4s" }}
+            >
+              <div className="absolute inset-0 bg-[#003D33]">
+                <figure>
+                  <Image
+                    src={kidsRoomImage}
+                    alt="#"
+                    loading="lazy"
+                    // height={1000}
+                    // width={1000}
+                    className="transition-opacity duration-300 opacity-100"
+                    fill={true}
                   />
                 </figure>
               </div>
@@ -144,10 +181,11 @@ function Portfolio() {
                     <Image
                       src={image1}
                       alt="#"
-                      height={1000}
-                      width={1000}
+                      // height={1000}
+                      // width={1000}
                       loading="lazy"
                       className="transition-opacity duration-300 opacity-100"
+                      fill={true}
                     />
                   </figure>
                 </div>
@@ -155,9 +193,9 @@ function Portfolio() {
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="text-center p-4">
                     <h3 className="text-[#D4AF37] text-xl font-serif mb-2">
-                      Luxury Villa Interior
+                      Id.Hrushikesh Magar
                     </h3>
-                    <p className="text-white">Contemporary Design</p>
+                    {/* <p className="text-white">Contemporary Design</p> */}
                   </div>
                 </div>
               </div>
@@ -171,10 +209,11 @@ function Portfolio() {
                     <Image
                       src={image2}
                       alt="#"
-                      height={1000}
-                      width={1000}
+                      // height={1000}
+                      // width={1000}
                       loading="lazy"
                       className="transition-opacity duration-300 opacity-100"
+                      fill={true}
                     />
                   </figure>
                 </div>
@@ -183,9 +222,9 @@ function Portfolio() {
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="text-center p-4">
                     <h3 className="text-[#D4AF37] text-xl font-serif mb-2">
-                      Modern Office Space
+                      Id.Tanuja Jadhav
                     </h3>
-                    <p className="text-white">Corporate Design</p>
+                    {/* <p className="text-white">Corporate Design</p> */}
                   </div>
                 </div>
               </div>
